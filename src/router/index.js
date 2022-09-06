@@ -1,27 +1,44 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-
-Vue.use(VueRouter)
+import Vue from "vue";
+import VueRouter from "vue-router";
+// import HomeView from '../views/HomeView.vue'
+import FormRegister from "@/components/FormRegister.vue";
+import FormLogin from "@/components/FormLogin.vue";
+import Dashboard from "@/views/Dashboard.vue";
+import FormAdd from "@/components/FormAdd.vue";
+import FormEdit from "@/components/FormEdit.vue";
+Vue.use(VueRouter);
 
 const routes = [
   {
-    path: '/',
-    name: 'home',
-    component: HomeView
+    path: "/",
+    name: "login",
+    component: FormLogin,
+  },
+
+  {
+    path: "/register",
+    name: "register",
+    component: FormRegister,
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  }
-]
+    path: "/dashboard",
+    name: "dashboard",
+    component: Dashboard,
+  },
+  {
+    path: "/formadd",
+    name: "formadd",
+    component: FormAdd,
+  },
+  {
+    path: "/formedit/:id",
+    name: "formedit",
+    component: FormEdit,
+  },
+];
 
 const router = new VueRouter({
-  routes
-})
+  routes,
+});
 
-export default router
+export default router;
