@@ -1,16 +1,12 @@
 <template>
   <div class="container">
-    <div class="my-4">
-      <h4 class="my-auto">Update Buku</h4>
-    </div>
-
     <b-card
-      header="Tambah Buku"
+      header="Update Buku"
       header-tag="header"
       class="mb-2 p-3 mt-5"
       style="max-width: 80rem"
     >
-      <b-form @submit="onUpdate" v-if="show" class="border p-4">
+      <b-form @submit="onUpdate" v-if="show">
         <b-form-group id="input-group-2" label="Judul:" label-for="input-2">
           <b-form-input
             id="input-2"
