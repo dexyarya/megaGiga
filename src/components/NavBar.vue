@@ -10,7 +10,7 @@
           <b-icon icon="person-fill"></b-icon>
           <b-dropdown id="dropdown-1" variant="light">
             <b-dropdown-item>Change Password</b-dropdown-item>
-            <b-dropdown-item>Logout</b-dropdown-item>
+            <b-dropdown-item @click="handleLogout">Logout</b-dropdown-item>
           </b-dropdown>
         </div>
       </div>
@@ -19,7 +19,15 @@
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+    handleLogout() {
+      localStorage.clear();
+      this.$router.push("/");
+      location.reload();
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped></style>

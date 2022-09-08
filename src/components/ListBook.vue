@@ -86,8 +86,6 @@ export default {
     },
 
     deleteUser(item) {
-      //   const token =
-      //     "?access-token=08b816f010a788aa024c36f8552a110c16aad446ec0ecc81cc9d6479c71ce69d";
       const token = localStorage.getItem("token");
 
       axios

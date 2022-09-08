@@ -78,6 +78,7 @@ export default {
 
         if (response.data.message === "LOGIN SUCCESS") {
           this.$router.push("/dashboard");
+          location.reload();
         } else {
           alert("password / username salah");
         }

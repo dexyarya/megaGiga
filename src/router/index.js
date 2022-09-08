@@ -6,6 +6,7 @@ import FormLogin from "@/components/FormLogin.vue";
 import Dashboard from "@/views/Dashboard.vue";
 import FormAdd from "@/components/FormAdd.vue";
 import FormEdit from "@/components/FormEdit.vue";
+import ListBook from "@/components/ListBook.vue";
 Vue.use(VueRouter);
 
 const routes = [
@@ -29,6 +30,11 @@ const routes = [
     path: "/formadd",
     name: "formadd",
     component: FormAdd,
+  },
+  {
+    path: "/lsitbook",
+    name: "listbook",
+    component: ListBook,
   },
   {
     path: "/formedit/:id",
